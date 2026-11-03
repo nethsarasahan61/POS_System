@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    background-color: rgb(205, 206, 207);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .sidenav {
@@ -37,7 +38,7 @@ body{
     color: rgb(205, 202, 202);
 }
 main{
-    margin-left: 200px;
+    margin-left: 150px;
     padding: 20px;
 }
 .img{
@@ -51,4 +52,36 @@ main{
     justify-content: center;
     flex-direction: column;
     padding-top: 50px;
+}
+.contact-us{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    padding-top: 120px; 
+    color: aliceblue;     
+}
+.contact-us h3{
+    font-family: 'Times New Roman', Times, serif; 
+    padding-bottom: 15px;
+}
+.c-contents{
+    display: flex; 
+    flex-direction: column; 
+    padding-top: 5px; 
+    align-items: center; 
+    justify-content: center;
+}
+.c-contents img{
+    height: 18px; 
+    width: auto; 
+    padding-right: 20px; 
+    margin-bottom: 10px;
+}
+.c-contents h5{    
+    margin-bottom: 10px;
+}
+.c-contents a{
+    text-decoration: none;
+    color: aliceblue;
 }
