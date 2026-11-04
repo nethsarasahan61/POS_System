@@ -128,3 +128,135 @@ main{
     background-color: #111;
     color: rgb(249, 153, 27);
 }
+.card-section{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+}
+.card{
+    width: 203px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(244, 220, 172);    
+    border-radius: 5px;
+    border: solid 2px black;
+    flex: 0 0 200px;
+    height: 35  0px;  
+}
+.card p{
+    padding: 5px 18px 5px 18px;
+    text-align: justify;
+    margin-top: 5px;
+    font-size: 15px;
+}
+.card img{    
+    height: 200px; 
+    width: auto;
+}
+.img-content{
+    width: 100%;
+}
+.card-content{
+    padding: 10px;
+}
+.h6-tags{
+    display: block; 
+    padding: 0px 20px 0px 20px;
+}
+.cart-btn-container {
+    width: 140px;
+    height: 45px;
+    position: relative;
+}
+
+.cart-btn {
+    width: 100%;
+    height: 80%;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(255, 172, 65);
+    color: rgb(42, 42, 42);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cart-btn:hover {
+    background-color: rgb(255, 136, 40);
+}
+.quantity-controls {
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+    background-color: rgb(255, 172, 65);
+    border: 2px solid rgb(42, 42, 42);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.qty-action-btn {
+    width: 40px;
+    height: 100%;
+    background: none;
+    border: none;
+    color: rgb(42, 42, 42);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.qty-action-btn:hover {
+    background-color: rgb(255, 136, 40);
+}
+.qty-number {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(42, 42, 42);
+    user-select: none;
+}
+.hidden {
+    display: none !important;
+}
+.area{
+    display: flex;
+}
+.cart-section{
+    width: 30%;
+}
+.small-sections{
+    width: 100%;
+    display: block;
+    flex-direction: column;
+}
+.small-sections h1{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+    background-color: #646464;
+    color: azure;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.cards-area{
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 16px;  
+    -webkit-overflow-scrolling: touch; 
+}
