@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(205, 206, 207);
+    background-color: rgb(185, 185, 185);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .sidenav {
@@ -58,7 +58,7 @@ main{
     flex-direction: column; 
     align-items: center; 
     justify-content: center;
-    padding-top: 120px; 
+    padding-top: 50px; 
     color: aliceblue;     
 }
 .contact-us h3{
@@ -84,4 +84,47 @@ main{
 .c-contents a{
     text-decoration: none;
     color: aliceblue;
+}
+.m-h-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+.m-h-section-p{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 60vh;
+}
+.m-h-section-p h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 67px;
+    text-align: justify;
+}
+.m-h-section-p p{
+    text-align: justify;
+}
+.h-btn-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.btn-view-menu{
+    width: 95%;
+    padding: 10px 20px 10px 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    font-weight: 800;
+    background-color: rgb(249, 153, 27);
+    border-radius: 8px;
+    border: none;
+    transition: all .3s;
+}
+.btn-view-menu:hover{
+    background-color: #111;
+    color: rgb(249, 153, 27);
 }

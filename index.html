@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,10 +12,11 @@
             <img src="assets/imgs/burger.png" alt="" style="width: 100px; height: 100%;">
         </div>
         <div class="links">
-            <a href="#home"><b>Home</b></a>
-            <a href="#services"><b>Menu</b></a>            
-            <a href="#contact"><b>Customers</b></a>
-            <a href="#clients"><b>History</b></a>
+            <a href="index.html"><b>Home</b></a>
+            <a href="Menu.html"><b>Menu</b></a>            
+            <a href="Customers.html"><b>Customers</b></a>
+            <a href="History.html"><b>History</b></a>
+            <a href="About.html"><b>About</b></a>
         </div>
         <div class="contact-us">
             <h3><i>Contact Us</i></h3>
@@ -34,8 +35,18 @@
         </div>        
     </nav>
     <main>
-            <h2>Main Content Title</h2>
-            <p>This content area is shifted to the right so it doesn't get covered by the fixed side navigation bar.</p>
+            <div class="m-h-section">
+                <div class="m-h-section-p">
+                    <h1>THE ULTIMATE BURGER HEAVEN</h1>
+                    <p>Welcome to our Burger Paradise, where every bite is a journey into flavor perfection indulge in a smyphony of premium ingredients, expertly creafted patties, and mouthwatering sauces.</p>
+                    <div class="h-btn-panel">
+                        <input type="button" value="Order Now" class="btn-view-menu" onclick="openMenuOnPress()">
+                    </div>
+                </div>
+                <div class="m-h-section-img">
+                    <img src="assets/imgs/burger_main.png" alt="" style="height: 550px; width: auto; margin-left: 60px;">
+                </div>
+            </div>
     </main>
 </div>
     <script src="assets/js/app.js"></script>
