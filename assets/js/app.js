@@ -2,35 +2,42 @@ console.log("hello js");
 function openMenuOnPress(){
     window.location.href="../Menu.html";
 }
-const addToCartBtn = document.getElementById('addToCartBtn');
-const quantityControls = document.getElementById('quantityControls');
-const qtyDisplay = document.getElementById('qtyDisplay');
-const increaseBtn = document.getElementById('increaseBtn');
-const decreaseBtn = document.getElementById('decreaseBtn');
+let cart = {};
+const Burger_card = document.querySelectorAll('.Burger');
+Burger_card.forEach((card, index) => {
+    const addBtn = card.querySelector('#addToCartBtn');
+    const controls = card.querySelector('#quantityControls');
+    const display = card.querySelector('#qtyDisplay');
 
-let quantity = 0;
+    const increaseBtn = card.querySelector('#increaseBtn');
+    const decreaseBtn = card.querySelector('#decreaseBtn');
 
-function updateUI() {
-    if (quantity > 0) {
-        addToCartBtn.classList.add('hidden');
-        quantityControls.classList.remove('hidden');
-        qtyDisplay.textContent = quantity;
-    } else {
-        quantityControls.classList.add('hidden');
-        addToCartBtn.classList.remove('hidden');
+    const id = `burger${index + 1}`;
+    cart[id] = 0;
+    function updateUI() {
+        display.textContent = cart[id];
+        if (cart[id] > 0) {
+            addBtn.classList.add('hidden');
+            controls.classList.remove('hidden');
+        } else {
+            controls.classList.add('hidden');
+            addBtn.classList.remove('hidden');
+        }
     }
-}
-addToCartBtn.addEventListener('click', () => {
-    quantity = 1;
-    updateUI();
-});
-increaseBtn.addEventListener('click', () => {
-    quantity++;
-    updateUI();
-});
-decreaseBtn.addEventListener('click', () => {
-    if (quantity > 0) {
-        quantity--;
+    addBtn.addEventListener('click', () => {
+        cart[id] = 1;
         updateUI();
-    }
+
+    });
+    increaseBtn.addEventListener('click', () => {
+        cart[id]++;
+        updateUI();
+    });
+    decreaseBtn.addEventListener('click', () => {
+        if (cart[id] > 0) {
+            cart[id]--;
+            updateUI();
+        }
+    });
+    updateUI();
 });
