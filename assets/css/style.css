@@ -474,3 +474,69 @@ main{
         font-size: 13px;
     }
 }
+.history-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+.history-header {
+    margin-bottom: 30px;
+}
+.history-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.history-header p {
+    color: #888;
+}
+.order-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.order-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    color: #222;
+}
+.order-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.order-card-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+.order-card-header span {
+    font-weight: bold;
+    font-size: 17px;
+}
+.order-items {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 14px;
+}
+.order-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.empty-history {
+    text-align: center;
+    padding: 50px 20px;
+    color: #888;
+    background: white;
+    border-radius: 10px;
+}

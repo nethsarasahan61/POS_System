@@ -183,6 +183,7 @@ function printBill(){
     History.push(order);
     localStorage.setItem("History",JSON.stringify(History));
     localStorage.setItem("nextBillNumber",nextBillNumber+1);
+    clearCart()
     generateReceipt(order);
 }
 function generateReceipt(order) {
@@ -210,3 +211,57 @@ function generateReceipt(order) {
 function formatPrice(amount){
     return "Rs."+Number(amount).toFixed(2);
 }
+function clearCart(){
+    Object.keys(cart).forEach(category=>{
+        cart[category]={};
+    });
+    Object.values(productCards).forEach(card =>{
+        card.querySelector("#qtyDisplay").textContent=0;
+        card.querySelector("#quantityControls").classList.add("hidden");
+        card.querySelector("#addToCartBtn").classList.remove("hidden");
+    });
+    displayCart();
+    updateCart();
+}
+function displayOrderHistory() {
+    const historyList = document.getElementById("orderHistoryList");
+    historyList.innerHTML = "";
+    if (History.length === 0) {
+        historyList.innerHTML = `
+            <div class="empty-history">
+                <h3>No orders yet</h3>
+                <p>Your completed orders will appear here.</p>
+            </div>
+        `;
+        return;
+    }
+    History.forEach((order, index) => {
+        const orderCard = document.createElement("div");
+        orderCard.classList.add("order-card");
+        const orderNumber = index+1;
+        let itemsHTML = "";
+        order.items.forEach(product => {
+            itemsHTML += `
+                <div class="order-item">
+                    <span>${product.name} × ${product.qty}</span>
+                    <span>Rs. ${Number(product.total).toFixed(2)}</span>
+                </div>
+            `;
+        });
+        orderCard.innerHTML = `
+            <div class="order-card-header">
+                <h3>Order ${orderNumber}</h3>
+                <span>${order.id}</span>
+            </div>
+            <div class="order-items">
+                ${itemsHTML}
+            </div>
+            <div class="order-card-footer">
+                Grand Total: Rs. ${Number(order.grandTotal).toFixed(2)}
+            </div>
+        `;
+        historyList.appendChild(orderCard);
+    });
+
+}
+displayOrderHistory();
