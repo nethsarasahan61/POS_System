@@ -31,6 +31,7 @@ Object.entries(categories).forEach(([category, selector]) => {
         const name = card.querySelector('.p-name').textContent.trim();
         let rawPrice = card.querySelector('.p-price').textContent.trim();
         let price = Number(rawPrice.replace(/[^\d]/g, ''));
+        const img = "../"+card.querySelector('img').getAttribute('src');
         price = price / 100;
         const id = `${category}${index + 1}`;
 
@@ -51,7 +52,8 @@ Object.entries(categories).forEach(([category, selector]) => {
                 name: name,
                 price: price,
                 qty: 1,
-                total: price
+                total: price,
+                img: img
             };
             updateUI();
             updateCart();
@@ -60,7 +62,6 @@ Object.entries(categories).forEach(([category, selector]) => {
             const product = cart[category][id];
             product.qty++;
             console.log(product.price);
-            console.log("Pakaya");
             
             product.total = product.price * product.qty;
             updateUI();
@@ -87,10 +88,8 @@ function calculateGrandTotal() {
     Object.values(cart).forEach(category => {
         Object.values(category).forEach(product => {
             let price = Number(product.price);
-            console.log(product.price);
             let qty = Number(product.qty);
-            console.log(price);
-            console.log(qty);
+            let img=product.img;
             grandTotal += price * qty;
         });
     });
