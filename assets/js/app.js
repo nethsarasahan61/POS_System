@@ -104,6 +104,22 @@ function updateCart() {
 function displayCart() {
     const cartItems = document.getElementById("c-cart");
     cartItems.innerHTML = "";
+    const cartTotal = document.getElementById("c-f-section-1");
+    cartTotal.innerHTML = "";
+    let total=calculateGrandTotal();
+    let gT=total*1.1;
+    cartTotal.innerHTML = `
+        <div class="c-f-s-text">
+            <p>Sub Total</p>
+            <p>Tax</p>
+            <p>Grand Total</p>                                        
+        </div>
+        <div class="c-f-s-value">
+            <p id="toal">Rs.${Number(total).toFixed(2)}</p>
+            <p>10%</p>
+            <p>Rs.${Number(gT).toFixed(2)}</p>
+        </div>
+    `;        
     Object.entries(cart).forEach(([category, products]) => {
         Object.entries(products).forEach(([id, product]) => {
             const item = document.createElement("div");            
