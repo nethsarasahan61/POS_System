@@ -106,8 +106,7 @@ function displayCart() {
     cartItems.innerHTML = "";
     Object.entries(cart).forEach(([category, products]) => {
         Object.entries(products).forEach(([id, product]) => {
-            const item = document.createElement("div");
-            
+            const item = document.createElement("div");            
             item.innerHTML = `
                 <div class="container-cart">
                     <div class="product-img" id="p-i-container">
