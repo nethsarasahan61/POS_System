@@ -817,6 +817,44 @@
                     </div>
                 </div>
             </div>
+        <div id="printReceipt">
+            <div class="receipt-header">
+                <h1>THE ULTIMATE BURGER HEAVEN</h1>
+                <p>Every bite is a journey into flavor perfection!</p>
+                <p>Moratuwa, Sri Lanka</p>
+                <p>Tel: 071 627 5678</p>
+            </div>
+            <hr>
+            <div class="receipt-details">
+                <p>Bill No: <span id="billNumber"></span></p>
+                <p>Date: <span id="billDate"></span></p>
+                <p>Time: <span id="billTime"></span></p>
+            </div>
+            <hr>
+            <table class="receipt-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Unit Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="receiptItems">
+
+                </tbody>
+            </table>
+            <hr>
+            <div class="receipt-totals">
+                <p>Subtotal: <span id="receiptSubtotal"></span></p>
+                <p>Tax: <span id="receiptTax"></span></p>
+                <h2>Grand Total: <span id="receiptGrandTotal"></span></h2>
+            </div>
+            <hr>
+            <div class="receipt-footer">
+                <h3>THANK YOU FOR YOUR ORDER!</h3>
+            </div>
+        </div>
     </main>
 </div>
     <script src="assets/js/app.js"></script>

@@ -405,3 +405,72 @@ main{
     align-items: flex-end; 
     justify-content: center;
 }
+#printReceipt {
+    display: none;
+}
+.receipt-header,
+.receipt-footer {
+    text-align: center;
+}
+.receipt-header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+.receipt-header p,
+.receipt-footer p {
+    margin: 4px 0;
+}
+.receipt-details p {
+    margin: 6px 0;
+}
+.receipt-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.receipt-table th,
+.receipt-table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.receipt-table th:last-child,
+.receipt-table td:last-child {
+    text-align: right;
+}
+.receipt-totals {
+    margin-left: auto;
+    width: 45%;
+}
+.receipt-totals p,
+.receipt-totals h2 {
+    display: flex;
+    justify-content: space-between;
+}
+.receipt-footer {
+    margin-top: 35px;
+}
+@media print {
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+    body * {
+        visibility: hidden;
+    }
+    #printReceipt,
+    #printReceipt * {
+        visibility: visible;
+    }
+    #printReceipt {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        color: black;
+        background: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+    }
+}
